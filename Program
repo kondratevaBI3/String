@@ -1,0 +1,37 @@
+import java.lang.StringBuilder;
+
+public class Program {
+    public static void main(String args[]) {
+        StringBuilder st = nums(56, 3);
+        System.out.println(st);
+        Replace2(st);
+        System.out.println(st);
+
+    }
+
+    public static StringBuilder nums(int a, int b) {
+        StringBuilder result = new StringBuilder();
+        result.append(56).append(" + ").append(3).append(" = ").append(a + b).append(" \n ");
+        result.append(56).append(" - ").append(3).append(" = ").append(a - b).append(" \n ");
+        result.append(56).append(" * ").append(3).append(" = ").append(a * b).append(" \n ");
+        return result;
+    }
+
+    public static StringBuilder Replace2(StringBuilder stringBuilder) {
+        int res;
+        while ((res = stringBuilder.indexOf("=")) != -1) {
+            stringBuilder.replace(res, res + 1, "равно");
+        }
+        return stringBuilder;
+    }
+}
+
+    //public static StringBuilder Replace1 (StringBuilder stringBuilder){
+        //int d;
+        //while ((d = stringBuilder.indexOf("=")) !=-1) {
+            //stringBuilder.deleteCharAt(d);
+            //stringBuilder.insert(d, "равно");
+        //}
+
+        //return stringBuilder;
+    //}
