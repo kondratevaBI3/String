@@ -1,0 +1,18 @@
+public class Main {
+    public static void main( String args[] ) {
+        String str = "I like Java!!!";
+        boolean check;
+        check = str.endsWith("!!!");
+        check = str.startsWith("I like");
+        check = str.contains("java");
+        int index = str.indexOf("java");
+        String repl = str.replace ("a", "o");
+        String reg = str.toUpperCase();
+        int index1 = str.indexOf("J");
+        int index2 =str.lastIndexOf("a");
+        String sub = str.substring(7,11);
+        System.out.println(sub);
+        //System.out.println(index2);
+
+    }
+    }
